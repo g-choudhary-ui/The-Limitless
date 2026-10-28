@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #f9f6f0;
+    --color-surface: #fdfcf9;
+    --color-text: #2e2322;
+    --color-muted: #786866;
+    --color-border: #eae1d6;
+  }
+
+  .dark {
+    --color-bg: #181313;
+    --color-surface: #231c1b;
+    --color-text: #f7ede6;
+    --color-muted: #aa9896;
+    --color-border: #382c2b;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphism utilities with warm beige & dusty pink tint */
+.glass-panel {
+  background: rgba(253, 250, 246, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 178, 169, 0.35);
+}
+
+.dark .glass-panel {
+  background: rgba(35, 28, 27, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 178, 169, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(234, 225, 214, 0.95);
+  box-shadow: 0 4px 24px -1px rgba(95, 51, 49, 0.05), 0 2px 8px -1px rgba(95, 51, 49, 0.03);
+}
+
+.dark .glass-card {
+  background: rgba(36, 29, 28, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 178, 169, 0.12);
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.35);
+}
+
+/* Dusty Pink & Warm Terracotta Gradients */
+.gradient-text {
+  background: linear-gradient(135deg, #be726f 0%, #d48b72 45%, #9e504c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-subtle {
+  background: linear-gradient(135deg, #2e2322 0%, #634b49 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .gradient-text-subtle {
+  background: linear-gradient(135deg, #f7ede6 0%, #d3c4be 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbars with warm hues */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8c8ba;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #473837;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bf7a75;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #634b49;
+}
